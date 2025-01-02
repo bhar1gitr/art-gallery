@@ -1,0 +1,71 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  /* Gallery Container */
+  .gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Gallery Item Styling */
+  .gallery-item {
+    width: calc(25% - 20px); /* 4 items per row */
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Hover Effects */
+  .gallery-item:hover {
+    transform: translateY(-10px); /* Lift the item */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1); /* Zoom in the image */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .gallery-item {
+      width: calc(50% - 20px); /* 2 items per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gallery-item {
+      width: 100%; /* 1 item per row on very small screens */
+    }
+  }
+  
