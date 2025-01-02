@@ -3,22 +3,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #1e2a47, #161e30); /* Dark gradient background for a tech vibe */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-    margin: 0;
-  }
-  
-  /* Gallery Container */
-  .gallery-container {
+    color: #fff;
+}
+
+/* Gallery Container */
+.gallery-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,46 +26,76 @@
     padding: 20px;
     max-width: 1200px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  /* Gallery Item Styling */
-  .gallery-item {
+}
+
+/* Gallery Item Styling */
+.gallery-item {
     width: calc(25% - 20px); /* 4 items per row */
     height: 300px;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     position: relative;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .gallery-item img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    background-color: #222; /* Dark background for items */
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+/* Image Styling */
+.gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  /* Hover Effects */
-  .gallery-item:hover {
-    transform: translateY(-10px); /* Lift the item */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .gallery-item:hover img {
-    transform: scale(1.1); /* Zoom in the image */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .gallery-item {
-      width: calc(50% - 20px); /* 2 items per row on smaller screens */
+    transition: transform 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.gallery-item:hover {
+    transform: translateY(-12px) scale(1.05); /* Slightly lift and scale */
+    box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3); /* Neon glow shadow */
+    border: 2px solid #00ffff; /* Neon border */
+    filter: brightness(1.2); /* Brighten the image */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Slight zoom-in */
+    opacity: 0.9;
+}
+
+/* Neon Glowing Effect */
+.gallery-item:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 255, 255, 0.3);
+    border-radius: 12px;
+    z-index: -1;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Keyframe for glowing effect */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px 2px #00ffff;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .gallery-item {
-      width: 100%; /* 1 item per row on very small screens */
+    100% {
+        box-shadow: 0 0 30px 10px #00ffff;
     }
-  }
-  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 20px); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: 100%; /* 1 item per row on very small screens */
+    }
+}
