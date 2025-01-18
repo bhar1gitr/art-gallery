@@ -1,41 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Art Gallery</title>
+    <title>Enhanced Art Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="gallery-container">
-        <div class="gallery-item">
-            <img src="./images/dark.png" alt="Artwork 1">
+    <div class="container">
+        <h1>Animated Art Gallery</h1>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="abstract">Abstract</button>
+            <button class="filter-btn" data-filter="portrait">Portrait</button>
+            <button class="filter-btn" data-filter="landscape">Landscape</button>
         </div>
-        <div class="gallery-item">
-            <img src="./images/nero.png" alt="Artwork 2">
-        </div>
-        <div class="gallery-item">
-            <img src="./images/Screenshot 2024-12-29 233214.png" alt="Artwork 3">
-        </div>
-        <div class="gallery-item">
-            <img src="./images/Screenshot 2024-12-30 002114.png" alt="Artwork 4">
-        </div>
-        <div class="gallery-item">
-            <img src="./images/Screenshot 2024-12-31 125512.png" alt="Artwork 4">
-        </div>
-        <div class="gallery-item">
-            <img src="./images/Screenshot 2024-12-31 224543.png" alt="Artwork 4">
-        </div>
-        <div class="gallery-item">
-            <img src="./images/Screenshot 2025-01-01 124326.png" alt="Artwork 4">
-        </div>
-        <div class="gallery-item">
-            <img src="./images/Untitled.png" alt="Artwork 4">
-        </div>
-        <!-- Add more gallery items as needed -->
-    </div>
-</body>
 
+        <div class="gallery">
+            <div class="gallery-item" data-category="abstract">
+                <img src="./images/dark.png" alt="Artwork 1">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/nero.png" alt="Artwork 2">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="landscape">
+                <img src="./images/Screenshot 2024-12-29 233214.png" alt="Artwork 3">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="abstract">
+                <img src="./images/Screenshot 2024-12-30 002114.png" alt="Artwork 4">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/Screenshot 2024-12-31 125512.png" alt="Artwork 5">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="landscape">
+                <img src="./images/Screenshot 2024-12-31 224543.png" alt="Artwork 6">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="abstract">
+                <img src="./images/Screenshot 2025-01-01 124326.png" alt="Artwork 7">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="abstract">
+                <img src="./images/devil.png" alt="Artwork 7">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="abstract">
+                <img src="./images/fight.png" alt="Artwork 7">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/Untitled.png" alt="Artwork 8">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/luffy.png" alt="Artwork 8">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/tiger.png" alt="Artwork 8">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/tre.png" alt="Artwork 8">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/fifisi.png" alt="Artwork 8">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="portrait">
+                <img src="./images/danaaaa.png" alt="Artwork 8">
+                <div class="overlay">
+                    <p>View</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
